@@ -14,12 +14,12 @@ export async function handlerNotesGet(req: Request, res: Response, user: User) {
 }
 
 export async function handlerNotesCreate(
-  req: Request,
+  req: Request
   res: Response,
   user: User,
 ) {
   try {
-    const { note } = req.body;
+    const { note  = req.body;
     const noteId = uuidv4();
 
     await createNote({
